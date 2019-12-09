@@ -1,0 +1,147 @@
+<!-- Header Section Start -->
+<header id="home" class="hero-area-2">
+  <div class="overlay"></div>
+  <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand"><i class="lni-medall-alt" style="font: size 50px"></i>&nbsp;Digi Tech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="lni-menu"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#app-features">Why US</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#pricing">Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#blog">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#map-area">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" data-toggle="modal" data-target="#modelId" href="#">Sign In</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link page-scroll" href="#map-area">Sign In</a>
+          </li> -->
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row space-100">
+      <div class="col-lg-7 col-md-12 col-xs-12">
+        <div class="contents">
+          <h2 class="head-title">Get Your App Landing Page <br> With Proton Template</h2>
+          <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse unde blanditiis nostrum mollitia aliquam sed.
+            Numquam ipsum unde repellendus similique autem non ab quibusdam enim provident distinctio! Fugit tenetur, iusto.</p>
+          <div class="header-button">
+            <a href="#" class="btn btn-border-filled">Learn More</a>
+            <a href="#" class="btn btn-border" data-toggle="modal" data-target="#modelId">Sign In</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 col-xs-12">
+        <div class="intro-img">
+          <img src="../assets/img/intro-mobile.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Header Section End -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" >
+  Launch
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> -->
+      <div class="modal-body">
+          <div class="alert alert-success alert-dismissible" *ngIf="isAdded">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong><i class="fa fa-bell"></i>Success!</strong> SignUp Successful
+            </div>
+            
+        <ul class="nav nav-tabs" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+              aria-selected="true">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+              aria-selected="false">Sign Up</a>
+          </li>
+
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="alert alert-success alert-dismissible" *ngIf="isSigned">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong><i class="fa fa-bell"></i>Success!</strong> Put right Email or Password
+              </div>
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              
+            <form #mForm="ngForm">
+              
+              <div class="form-group">
+                <input type="text" ngModel class="form-control" placeholder="Email" name="Email">
+              </div>
+
+              <div class="form-group">
+                <input type="password" ngModel class="form-control" placeholder="Password" name="Password">
+              </div>
+              <input type="reset" class="form-control btn btn-primary" value="Sign In" (click)="signin(mForm)" data-dismiss="modal">
+            </form>
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+              
+            <form #myForm="ngForm">
+            <div class="form-group">
+              <input type="text" ngModel class="form-control" placeholder="Name" name="Name" #Name="ngModel">
+            </div>
+
+            <div class="form-group">
+
+              <input type="text" ngModel class="form-control" placeholder="Address" name="Address" #Address="ngModel">
+            </div>
+
+            <div class="form-group">
+
+              <input type="text" ngModel class="form-control" placeholder="Email" name="Email" #Email="ngModel">
+            </div>
+            <div class="form-group">
+
+              <input type="password" ngModel class="form-control" placeholder="Password" name="Password" #Password="ngModel">
+
+            </div>
+            <div class="form-group">
+
+              <input type="reset"  class="form-control btn btn-primary" value="SignUp"   (click)="signup(myForm)">
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

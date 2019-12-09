@@ -1,0 +1,54 @@
+<div>
+  <br>
+  <br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="card card-user border-info">
+          <div class="card-header bg-danger text-center">
+            <img class="img-fluid" src="../../assets/img/3.png" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center text-danger">Admin: Sign In</h5>
+            <div class="alert alert-danger alert-dismissible" *ngIf="isAdded">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong><i class="fa fa-bell"></i>Wrong!</strong> Put right Email or Password
+            </div>
+            <form id="form1" #myForm="ngForm">
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Email :</label>
+                    <input type="text" ngModel name="Email" id="Email" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Password :</label>
+                    <input type="password" ngModel name="Password" id="Password" class="form-control" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="col-md-12">
+                  <input type="reset" (click)="LoginAdmin(myForm.value)" value="Sign In" class="btn btn-fill btn-info btn-block" />
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+
+    </div>
+  </div>
+</div>
